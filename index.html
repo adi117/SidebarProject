@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+</head>
+<body>
+    <section class="sidebar">
+        <div class="sidebar">
+            <section class="sidebar-menu-top">
+                <div class="logo">
+                    <img src="assets/Sidebar/Menu/Icon/logo-adisainin.svg" alt="">
+                    <h3>Adisainin</h3>
+                </div>
+                <div class="search-menu">
+                    <img src="assets/Sidebar/Menu/Icon/icon-magnifier.svg" class="search-menu-icon">
+                    <input type="text" placeholder="Search menu..." class="search-menu-box">
+                </div>
+            </section>
+            <section class="sidebar-menu-main">
+                <div class="sidebar-menu-main-section shop">
+                    <p class="section-title">Shop</p>
+                    <div class="section-menu-list">
+                        <div class="sidebar-menu dashboard" onclick="changeIcon('dashboard')">
+                            <img src="assets/Sidebar/Menu/Icon/icon-dashboard-active.svg" class="sidebar-menu-icon" id="iconDashboard">
+                            <p class="sidebar-menu-title active">Dashboard</p>
+                        </div>
+                        <div class="sidebar-menu product" onclick="changeIcon('product')">
+                            <img src="assets/Sidebar/Menu/Icon/icon-product-default.svg" class="sidebar-menu-icon" id="iconProduct">
+                            <p class="sidebar-menu-title">Product</p>
+                            <img src="assets/Sidebar/Menu/Icon/chevron.svg" class="chevron">
+                        </div>
+                        <div class="sidebar-menu order" onclick="changeIcon('order')">
+                            <img src="assets/Sidebar/Menu/Icon/icon-order-default.svg" class="sidebar-menu-icon" id="iconOrder">
+                            <p class="sidebar-menu-title">Order</p>
+                            <div class="notification">2</div>
+                        </div>
+                        <div class="sidebar-menu customer" onclick="changeIcon('customer')">
+                            <img src="assets/Sidebar/Menu/Icon/icon-customer-default.svg" class="sidebar-menu-icon" id="iconCustomer">
+                            <p class="sidebar-menu-title">Customer</p>
+                        </div>
+                        <div class="sidebar-menu shop" style="margin-bottom: 48px;" onclick="changeIcon('shop')">
+                            <img src="assets/Sidebar/Menu/Icon/icon-shop-default.svg" class="sidebar-menu-icon" id="iconShop">
+                            <p class="sidebar-menu-title">Shop</p>
+                            <img src="assets/Sidebar/Menu/Icon/chevron.svg" class="chevron">
+                        </div>
+                    </div>
+
+                    <div class="sidebar-menu-main-section tools">
+                        <p class="section-title">Tools</p>
+                        <div class="section-menu-list">
+                            <div class="sidebar-menu sales" onclick="changeIcon('sales')">
+                                <img src="assets/Sidebar/Menu/Icon/icon-sales-default.svg" class="sidebar-menu-icon" id="iconSales">
+                                <p class="sidebar-menu-title">Sales</p>
+                            </div>
+                            <div class="sidebar-menu analytics" onclick="changeIcon('analytics')">
+                                <img src="assets/Sidebar/Menu/Icon/icon-analytics-default.svg" class="sidebar-menu-icon" id="iconAnalytics">
+                                <p class="sidebar-menu-title" style="width: auto !important">Analytics</p>
+                                <div class="label">
+                                    New
+                                </div>
+                            </div>
+                            <div class="sidebar-menu integrations" onclick="changeIcon('integrations')">
+                                <img src="assets/Sidebar/Menu/Icon/icon-integrations-default.svg" class="sidebar-menu-icon" id="iconIntegrations">
+                                <p class="sidebar-menu-title">Integrations</p>
+                            </div>
+                        </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <script src="script.js">
+
+    </script>
+</body>
+</html>
