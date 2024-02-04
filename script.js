@@ -7,6 +7,7 @@ const body = document.querySelector('body');
 const sidebar = document.querySelector('.sidebar');
 const minimizeToggle = document.querySelector('.minimize-toggle');
 const minimizeToggleImg = document.querySelector('.minimize-toggle img');
+const accordionMenu = document.querySelector('sidebar-menu.product');
 
 //Event listener for when minimize toggle clicked
 minimizeToggle.addEventListener('click', () => {

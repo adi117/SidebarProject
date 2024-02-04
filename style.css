@@ -241,6 +241,6 @@ html, body {
     border-color: transparent #333 transparent transparent; /* Set border color to match tooltip background */
 }
 
-.sidebar-menu:hover .tooltip{
+.sidebar.close .sidebar-menu:hover .tooltip{
     display: block;
 }
