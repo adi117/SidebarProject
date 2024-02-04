@@ -11,6 +11,8 @@ html, body {
 section .sidebar{
     display: flexbox;
     clear: both;
+    width: fit-content;
+    min-width: 219.5px;
     max-width: 248px;
     height: 100vh;
     min-height: 568px;

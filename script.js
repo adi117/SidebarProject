@@ -16,14 +16,15 @@ input.addEventListener('blur', showIcon = () => {
     }
 });
 
-//Event listener for clicked chevron
+// Event listener for clicked chevron
 chevronIcon.forEach(element => {
     element.addEventListener('click', rotateChevron = () => {
 
-        chevronIcon.forEach(icon => {
-            icon.classList.remove('rotate');
-            icon.classList.add('rotate0');
-        })
+        // Rotate chevron if user click other chevron menu
+        // chevronIcon.forEach(icon => {
+        //     icon.classList.remove('rotate');
+        //     icon.classList.add('rotate0');
+        // });
 
         if(element.classList.contains('rotate')){
             element.classList.remove('rotate');
@@ -35,7 +36,7 @@ chevronIcon.forEach(element => {
     })
 });
 
-//Set sidebar menu title change color while clicked
+// Set sidebar menu title change color while clicked
 sidebarMenu.forEach(title => {
 
     const sidebarMenuSecondElement = title.querySelector('.sidebar-menu-title');
@@ -53,7 +54,7 @@ sidebarMenu.forEach(title => {
     })
 })
 
-//Change icon while menu is active
+// Change icon while menu is active
 function changeIcon(menuId) {
     // Reset all menu icons
         document.getElementById('iconDashboard').src = 'assets/Sidebar/Menu/Icon/icon-dashboard-default.svg';
