@@ -201,6 +201,11 @@ html, body {
     left: 24px;
 }
 
+.close .tooltip{
+    position: absolute;
+    left: 84px;
+}
+
 .close h3,
 .close input,
 .close .sidebar-menu-title,
@@ -209,4 +214,33 @@ html, body {
 .close .chevron,
 .close .section-title{
     visibility: hidden;
+}
+
+/* Tooltip while hovering sidebar-menu */
+.tooltip{
+    position: absolute;
+    background-color: #262626;
+    color: #FAFAFA;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    display: none;
+    left: 260px;
+}
+
+.tooltip::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100%; /* Position triangle at the left side of tooltip */
+    margin-top: -5px; /* Adjust the top position to center the triangle */
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #333 transparent transparent; /* Set border color to match tooltip background */
+}
+
+.sidebar-menu:hover .tooltip{
+    display: block;
 }

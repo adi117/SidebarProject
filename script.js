@@ -1,4 +1,5 @@
 const input = document.querySelector('.search-menu-box');
+const inputMenu = document.querySelector('.search-menu');
 const icon = document.querySelector('.search-menu-icon');
 const chevronIcon = document.querySelectorAll('.chevron');
 const sidebarMenu = document.querySelectorAll('.sidebar-menu');
@@ -13,9 +14,16 @@ minimizeToggle.addEventListener('click', () => {
     minimizeToggleImg.classList.toggle('rotate');
 })
 
+//When user click search it automatically maximize sidebar
+inputMenu.addEventListener('click', () => {
+    sidebar.classList.remove('close');
+    minimizeToggleImg.classList.toggle('rotate');
+
+    input.focus();
+})
+
 // Event listener for when the input box gains focus (clicked)
 input.addEventListener('focus', hideIcon = () => {
-    console.log();
     icon.style.display = 'none'; // Hide the icon when input is focused
 });
 
@@ -108,3 +116,13 @@ function changeIcon(menuId) {
             break;
     }
 }
+
+// Show tooltip by menu hovered
+sidebarMenu.forEach(menu => {
+    const tooltipText = menu.getAttribute('data-tooltip');
+
+    const tooltip = document.createElement('div');
+    tooltip.classList.add('tooltip');
+    tooltip.innerText = tooltipText;
+    menu.appendChild(tooltip);
+})
