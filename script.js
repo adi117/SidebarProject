@@ -1,7 +1,17 @@
 const input = document.querySelector('.search-menu-box');
 const icon = document.querySelector('.search-menu-icon');
 const chevronIcon = document.querySelectorAll('.chevron');
-const sidebarMenu = document.querySelectorAll('.sidebar-menu')
+const sidebarMenu = document.querySelectorAll('.sidebar-menu');
+const body = document.querySelector('body');
+const sidebar = document.querySelector('.sidebar');
+const minimizeToggle = document.querySelector('.minimize-toggle');
+const minimizeToggleImg = document.querySelector('.minimize-toggle img');
+
+//Event listener for when minimize toggle clicked
+minimizeToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('close');
+    minimizeToggleImg.classList.toggle('rotate');
+})
 
 // Event listener for when the input box gains focus (clicked)
 input.addEventListener('focus', hideIcon = () => {

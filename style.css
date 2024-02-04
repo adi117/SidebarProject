@@ -8,15 +8,17 @@ html, body {
     font-family: 'Inter', sans-serif;
 }
 
-section .sidebar{
-    display: flexbox;
+.sidebar{
+    justify-content: left;
+    position: relative;
     clear: both;
-    width: fit-content;
-    min-width: 219.5px;
+    width: 248px;
+    /* min-width: 219.5px; */
     max-width: 248px;
     height: 100vh;
     min-height: 568px;
     background-color: #fafafa;
+    transition: width 0.5s ease;
 }
 
 .active{
@@ -49,6 +51,13 @@ section .sidebar{
     margin-bottom: 16px;
 }
 
+.logo-website{
+    height: 24px;
+    width: 24px;
+    transition: left 0.5s ease;
+    left: 20px;
+}
+
 .logo h3{
     margin: 0;
     color: #404040;
@@ -59,7 +68,24 @@ section .sidebar{
     width: 100%;
 }
 
+.minimize-toggle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 24px;
+    right: -20px;
+    height: 8px;
+    width: 8px;
+    padding: 12px;
+    border-radius: 6px;
+    border-style: solid;
+    border-color: #E5E5E5;
+    background-color: #EEF2FF;
+}
+
 .search-menu {
+    top: -16px;
     display: flex;
     align-items: center;
     gap: 6px;
@@ -118,6 +144,7 @@ section .sidebar{
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
+    visibility: visible;
 }
 
 .sidebar-menu-icon {
@@ -125,6 +152,8 @@ section .sidebar{
     height: 20px;
     align-items: start;
     justify-content: start;
+    left: 20px;
+    transition: left 0.5s ease;
 }
 
 .notification{
@@ -153,4 +182,31 @@ section .sidebar{
     padding: 0 10px;
     border-style: solid;
     border-radius: 4px;
+}
+
+/* Minimize Sidebar */
+
+.sidebar.close{
+    position: absolute;
+    width: 72px;
+}
+
+.close .sidebar-menu-icon{
+    position: absolute;
+    left: 24px;
+}
+
+.close .logo-website{
+    position: absolute;
+    left: 24px;
+}
+
+.close h3,
+.close input,
+.close .sidebar-menu-title,
+.close .label,
+.close .notification,
+.close .chevron,
+.close .section-title{
+    visibility: hidden;
 }
